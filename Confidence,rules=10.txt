@@ -1,0 +1,47 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 10 -T 0 -C 0.9 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -c 8
+Relation:     seeds_dataset-weka.filters.unsupervised.attribute.Discretize-B3-M-1.0-R1-precision6-weka.filters.unsupervised.attribute.Discretize-B3-M-1.0-R2-precision6-weka.filters.unsupervised.attribute.Discretize-B3-M-1.0-R3-precision6-weka.filters.unsupervised.attribute.Discretize-B3-M-1.0-R4-precision6-weka.filters.unsupervised.attribute.Discretize-B3-M-1.0-R5-precision6-weka.filters.unsupervised.attribute.Discretize-B3-M-1.0-R6-precision6-weka.filters.unsupervised.attribute.Discretize-B3-M-1.0-R7-precision6
+Instances:    210
+Attributes:   8
+              area
+              perimeter
+              compactness
+              kernel_length
+              kernel_width
+              asymmetry_coefficient
+              kernel_groove_length
+              class
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.35 (73 instances)
+Minimum metric <confidence>: 0.9
+Number of cycles performed: 13
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 10
+
+Size of set of large itemsets L(2): 8
+
+Size of set of large itemsets L(3): 5
+
+Size of set of large itemsets L(4): 1
+
+Best rules found:
+
+ 1. perimeter=below_14.023333 90 ==> area=below_14.12 90    <conf:(1)> lift:(2.1) lev:(0.22) [47] conv:(47.14)
+ 2. perimeter=below_14.023333 kernel_length=below_5.491 87 ==> area=below_14.12 87    <conf:(1)> lift:(2.1) lev:(0.22) [45] conv:(45.57)
+ 3. kernel_width=below_3.097667 78 ==> area=below_14.12 78    <conf:(1)> lift:(2.1) lev:(0.19) [40] conv:(40.86)
+ 4. kernel_width=below_3.097667 78 ==> perimeter=below_14.023333 78    <conf:(1)> lift:(2.33) lev:(0.21) [44] conv:(44.57)
+ 5. perimeter=below_14.023333 kernel_width=below_3.097667 78 ==> area=below_14.12 78    <conf:(1)> lift:(2.1) lev:(0.19) [40] conv:(40.86)
+ 6. area=below_14.12 kernel_width=below_3.097667 78 ==> perimeter=below_14.023333 78    <conf:(1)> lift:(2.33) lev:(0.21) [44] conv:(44.57)
+ 7. kernel_width=below_3.097667 78 ==> area=below_14.12 perimeter=below_14.023333 78    <conf:(1)> lift:(2.33) lev:(0.21) [44] conv:(44.57)
+ 8. kernel_length=below_5.491 kernel_width=below_3.097667 75 ==> area=below_14.12 75    <conf:(1)> lift:(2.1) lev:(0.19) [39] conv:(39.29)
+ 9. kernel_length=below_5.491 kernel_width=below_3.097667 75 ==> perimeter=below_14.023333 75    <conf:(1)> lift:(2.33) lev:(0.2) [42] conv:(42.86)
+10. perimeter=below_14.023333 kernel_length=below_5.491 kernel_width=below_3.097667 75 ==> area=below_14.12 75    <conf:(1)> lift:(2.1) lev:(0.19) [39] conv:(39.29)
+

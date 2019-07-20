@@ -1,0 +1,73 @@
+=== Run information ===
+
+Scheme:       weka.clusterers.SimpleKMeans -init 0 -max-candidates 100 -periodic-pruning 10000 -min-density 2.0 -t1 -1.25 -t2 -1.0 -N 3 -A "weka.core.EuclideanDistance -R first-last" -I 500 -num-slots 1 -S 10
+Relation:     seeds_dataset
+Instances:    210
+Attributes:   8
+              area
+              perimeter
+              compactness
+              asymmetry_coefficient
+              kernel_groove_length
+Ignored:
+              kernel_length
+              kernel_width
+              class
+Test mode:    Classes to clusters evaluation on training data
+
+=== Clustering model (full training set) ===
+
+
+kMeans
+======
+
+Number of iterations: 6
+Within cluster sum of squared errors: 17.031813652070092
+
+Initial starting points (random):
+
+Cluster 0: 18.59,16.05,0.9066,6.001,5.877
+Cluster 1: 10.93,12.8,0.839,5.398,5.045
+Cluster 2: 13.32,13.94,0.8613,7.035,5.44
+
+Missing values globally replaced with mean/mode
+
+Final cluster centroids:
+                                     Cluster#
+Attribute                Full Data          0          1          2
+                           (210.0)     (69.0)     (71.0)     (70.0)
+===================================================================
+area                       14.8475    18.4078    11.8658    14.3624
+perimeter                  14.5593    16.1693    13.2565    14.2937
+compactness                  0.871     0.8836     0.8477     0.8822
+asymmetry_coefficient       3.7002       3.63     4.7772      2.677
+kernel_groove_length        5.4081     6.0358     5.1073     5.0944
+
+
+
+
+Time taken to build model (full training data) : 0.03 seconds
+
+=== Model and evaluation on training set ===
+
+Clustered Instances
+
+0       69 ( 33%)
+1       71 ( 34%)
+2       70 ( 33%)
+
+
+Class attribute: class
+Classes to Clusters:
+
+  0  1  2  <-- assigned to cluster
+  2  5 63 | Kama
+ 67  0  3 | Rosa
+  0 66  4 | Canadian
+
+Cluster 0 <-- Rosa
+Cluster 1 <-- Canadian
+Cluster 2 <-- Kama
+
+Incorrectly clustered instances :	14.0	  6.6667 %
+
